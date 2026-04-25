@@ -7,4 +7,4 @@ pages_build_output_dir = "dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "yatta-db"
-database_id = "REPLACE_WITH_YOUR_D1_ID"
+database_id = "05029422-4ca5-40e2-84e1-dd7260ce801e"
