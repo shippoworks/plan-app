@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior-y: none;
+  }
+  button {
+    @apply select-none;
+  }
+}
+
+@layer components {
+  .app-shell {
+    @apply mx-auto flex h-full max-w-md flex-col bg-cream;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-primary px-8 py-4 text-lg font-bold text-white shadow-card transition active:scale-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-full bg-white px-6 py-3 font-semibold text-ink shadow-card transition active:scale-95;
+  }
+  .chip {
+    @apply inline-flex items-center justify-center rounded-full border border-ink/10 bg-white px-3 py-1.5 text-sm font-semibold text-ink/80 transition active:scale-95;
+  }
+  .chip-active {
+    @apply border-primary bg-primary text-white;
+  }
+}
+
+/* hide scrollbar for horizontal lists */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
